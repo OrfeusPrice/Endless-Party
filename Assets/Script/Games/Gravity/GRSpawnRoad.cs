@@ -18,22 +18,15 @@ public class GRSpawnRoad : MonoBehaviour
 
     void Start()
     {
-        //bRight.GetComponent<GRMoveRoad>().speed = -4;
-        //bLeft.GetComponent<GRMoveRoad>().speed = -4;
+        bRight.GetComponent<GRMoveRoad>().speed = -4;
+        bLeft.GetComponent<GRMoveRoad>().speed = -4;
 
         nRight = Instantiate(right);
         nLeft = Instantiate(left);
-        nRight.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX;
-        nRight.GetComponent<Rigidbody2D>().freezeRotation = true;
-        nRight.GetComponent<BoxCollider2D>().enabled = true;
-        
-        nLeft.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX;
-        nLeft.GetComponent<Rigidbody2D>().freezeRotation = true;
-        nLeft.GetComponent<BoxCollider2D>().enabled = true;
-        
-        //nRight.GetComponent<GRMoveRoad>().speed = -4;
-        //nLeft.GetComponent<GRMoveRoad>().speed = -4;
-        InvokeRepeating("Spawn", 0, 1f);
+
+        nRight.GetComponent<GRMoveRoad>().speed = -4;
+        nLeft.GetComponent<GRMoveRoad>().speed = -4;
+        InvokeRepeating("Spawn", 0, 0.8f);
     }
 
     private void Spawn()
