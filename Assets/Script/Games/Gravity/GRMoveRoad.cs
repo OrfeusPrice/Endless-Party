@@ -4,12 +4,8 @@ using UnityEngine;
 
 public class GRMoveRoad : MonoBehaviour
 {
-    public float speed = 0;
+    //public float speed = 0;
     public GameObject destr;
-    void Update()
-    {
-        transform.position += new Vector3(0, speed, 0) * Time.deltaTime;
-    }
 
     public void OnTriggerEnter2D(Collider2D col)
     {
