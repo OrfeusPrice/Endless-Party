@@ -35,23 +35,23 @@ public class GRSpawnRoad : MonoBehaviour
         nLeft.transform.position = left.transform.position;
 
         if (rr < 1.5f) { rr = 2.5f; }
-        nRight.transform.localScale = new Vector3(0.15f, (Random.value + 0.05f) * rr, 0);
+        nRight.transform.localScale = new Vector3(1f, (Random.value + 0.05f) * rr, 0);
         //nRight.GetComponent<SpriteRenderer>().color = Color.red;
         rl = 6 - rr;
         if (rl < 1.5f) { rl = 2.5f; }
-        nLeft.transform.localScale = new Vector3(0.15f, (Random.value + 0.05f) * rl, 0);
+        nLeft.transform.localScale = new Vector3(1f, (Random.value + 0.05f) * rl, 0);
         //nLeft.GetComponent<SpriteRenderer>().color = Color.red;
         rr = 6 - rr;
 
 
         if (nLeft.transform.localScale.y <= 1.5f)
         {
-            nLeft.transform.localScale = new Vector3(0.15f, 2f, 0);
+            nLeft.transform.localScale = new Vector3(1f, 2f, 0);
             //nLeft.GetComponent<SpriteRenderer>().color = Color.green;
         }
         if (nRight.transform.localScale.y <= 1.5f)
         {
-            nRight.transform.localScale = new Vector3(0.15f, 2f, 0);
+            nRight.transform.localScale = new Vector3(1f, 2f, 0);
             //nRight.GetComponent<SpriteRenderer>().color = Color.green;
         }
 
